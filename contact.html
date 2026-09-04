@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Harbor & Pike Accounting</title>
-  <meta name="description" content="Book a consult with Harbor & Pike Accounting. 220 Conti St, Mobile, AL. (251) 555-0194. Monday–Friday, 8:00am–5:00pm.">
+  <meta name="description" content="Book a consult with Harbor & Pike Accounting. 220 Conti St, Mobile, AL. 1 (251) 633-6786. Mon.–Fri. 8:00am–5:00pm.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +16,8 @@
 
   <div class="topbar">
     <div class="wrap">
-      <span class="topbar-extra">Monday–Friday, 8:00am–5:00pm</span>
-      <a href="tel:+12515550194">(251) 555-0194</a>
+      <span class="topbar-extra">Mon.–Fri. 8:00am–5:00pm</span>
+      <a href="tel:+12516336786">1 (251) 633-6786</a>
     </div>
   </div>
 
@@ -44,7 +44,7 @@
           <li><a href="contact.html" class="is-current" aria-current="page">Contact</a></li>
         </ul>
       </nav>
-      <a class="header-phone" href="tel:+12515550194">(251) 555-0194</a>
+      <a class="header-phone" href="tel:+12516336786">1 (251) 633-6786</a>
     </div>
   </header>
 
@@ -60,7 +60,11 @@
     <section class="section">
       <div class="wrap contact-layout">
         <div>
-          <form id="contact-form" action="#" method="post">
+          <form id="contact-form" name="contact" action="/contact.html" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="visually-hidden">
+              <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <p class="form-error" id="form-error" role="alert" hidden></p>
 
             <div class="field">
@@ -101,14 +105,14 @@
 
           <div class="form-thanks" id="form-thanks" hidden>
             <h2>Thank you</h2>
-            <p>We have your note. Someone from the office will write back during Monday–Friday hours, 8:00am–5:00pm. If it is urgent, call (251) 555-0194.</p>
+            <p>We have your note. Someone from the office will write back during Monday–Friday hours, 8:00am–5:00pm. If it is urgent, call 1 (251) 633-6786.</p>
           </div>
         </div>
 
         <aside class="contact-aside" aria-label="Office details">
           <div class="stack">
             <span class="contact-label">Phone</span>
-            <p><a href="tel:+12515550194">(251) 555-0194</a></p>
+            <p><a href="tel:+12516336786">1 (251) 633-6786</a></p>
           </div>
           <div class="stack">
             <span class="contact-label">Hours</span>
@@ -123,7 +127,7 @@
           </div>
           <div class="stack">
             <span class="contact-label">Email</span>
-            <p><a href="mailto:hello@harborpike.example">hello@harborpike.example</a></p>
+            <p><a href="mailto:hello@harborpike.com">hello@harborpike.com</a></p>
           </div>
         </aside>
       </div>
@@ -143,9 +147,9 @@
         </address>
       </div>
       <div>
-        <p><a href="tel:+12515550194">(251) 555-0194</a></p>
-        <p><a href="mailto:hello@harborpike.example">hello@harborpike.example</a></p>
-        <p>Monday–Friday<br>8:00am–5:00pm</p>
+        <p><a href="tel:+12516336786">1 (251) 633-6786</a></p>
+        <p><a href="mailto:hello@harborpike.com">hello@harborpike.com</a></p>
+        <p>Mon.–Fri.<br>8:00am–5:00pm</p>
       </div>
       <div>
         <ul class="footer-nav">

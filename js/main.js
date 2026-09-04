@@ -156,6 +156,26 @@ if (contactForm) {
 
     // Hide the error box in case it was showing from an earlier try.
     errorBox.hidden = true;
+
+    // Copy every field on the form, including the hidden Netlify name field.
+    var formData = new FormData(contactForm);
+    // Turn those fields into a string Netlify can store.
+    var encoded = new URLSearchParams(formData).toString();
+    // Read the action on the form. That is the contact page on the Netlify site.
+    var sendTo = contactForm.getAttribute("action");
+
+    // Send the form to Netlify. The live site receives this. The in-browser preview does not.
+    fetch(sendTo, {
+      // Use POST so Netlify treats this as a form submission.
+      method: "POST",
+      // Tell Netlify the body is a normal HTML form.
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // Put the field string in the request body.
+      body: encoded
+    }).catch(function () {
+      // The in-browser preview is not Netlify, so this send can fail. That is fine.
+    });
+
     // Hide the form so the user does not send it twice.
     contactForm.hidden = true;
     // Show the thank-you message instead of the form.
