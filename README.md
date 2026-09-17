@@ -1,7 +1,6 @@
 # Harbor & Pike Accounting
 
-Fictional professional website. Static HTML, CSS, and a little JavaScript. No build step.
-
+Fictional professional website.
 Open `index.html` in a browser, or serve the folder with any static file server.
 
 | File | Page |
@@ -14,4 +13,4 @@ Open `index.html` in a browser, or serve the folder with any static file server.
 | `css/styles.css` | All styles |
 | `js/main.js` | Mobile menu, service tabs, contact form check |
 
-Company details (phone, email, hours, address, team bios) are written into each HTML page. Change them in every file, or the header and footer will not match.
+Company details (phone, email, hours, address, team bios) are written into each HTML page.
